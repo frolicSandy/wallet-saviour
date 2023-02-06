@@ -8,12 +8,12 @@ export const TransactionList = () => {
   useEffect(()=>{
     getTransactions();
   },[getTransactions]);
-
+  const history = transactions.map(transaction => (<Transaction key={transaction._id} transaction={transaction} />));
   return (
     <>
       <h3>History</h3>
       <ul className="list">
-        {transactions.map(transaction => (<Transaction key={transaction._id} transaction={transaction} />))}
+        {history}
       </ul>
     </>
   )

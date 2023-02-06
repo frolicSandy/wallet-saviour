@@ -13,7 +13,7 @@ export const TransactionList = () => {
     <>
       <h3>History</h3>
       <ul className="list">
-        {history}
+        <history/>
       </ul>
     </>
   )
